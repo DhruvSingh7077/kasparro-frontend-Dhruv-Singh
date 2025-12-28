@@ -89,5 +89,5 @@ Vercel Production Deploy
 **Full-Stack Developer |**
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/dhruv-singh70/)
-[![Portfolio](https://img.shields.io/badge/Portfolio-000000.svg?style=for-the-badge&logo=github&logoColor=white)](https://dhruvsingh.vercel.app/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-000000.svg?style=for-the-badge&logo=github&logoColor=white)](https://kasparro-frontend-dhruv-singh.vercel.app/)
 
