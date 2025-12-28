@@ -116,17 +116,7 @@ export function MarketingNavbar({ activePage }: MarketingNavbarProps) {
               >
                 About
               </Link>
-              <Link
-                href="/architecture"
-                onClick={() => setOpen(false)}
-                className={`px-4 py-2 hover:bg-zinc-50 ${
-                  activePage === "architecture"
-                    ? "text-black font-semibold"
-                    : ""
-                }`}
-              >
-                Architecture
-              </Link>
+             
             </nav>
           </div>
         </div>
