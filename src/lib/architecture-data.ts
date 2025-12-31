@@ -12,7 +12,6 @@ import {
   Shield,
   Zap,
   Brain, // ✅ Added missing import
-  PackageCheck, // ✅ Alternative for stage 4
 } from "lucide-react";
 
 // import type { ColorScheme } from '@/components/architecture/PipelineStage';
