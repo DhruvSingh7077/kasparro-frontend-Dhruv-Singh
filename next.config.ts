@@ -1,13 +1,7 @@
-// next.config.js - REPLACE WITH THIS (JavaScript, no TypeScript issues)
-const path = require("path");
+import type { NextConfig } from "next";
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  // ✅ ONLY this line for src/app support
-  experimental: {
-    appDir: true,
-  },
-  // ✅ Fix @ alias for src/
+const nextConfig: NextConfig = {
+  experimental: {},
 };
 
-module.exports = nextConfig;
+export default nextConfig;

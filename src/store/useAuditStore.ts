@@ -2,8 +2,8 @@ import { create } from "zustand";
 import { AuditModule, Brand, BRANDS, MODULES } from "@/lib/data";
 
 interface AuditState {
-  selectedBrand: Brand;
-  selectedModule: AuditModule;
+  selectedBrand?: Brand;
+  selectedModule?: AuditModule;
   setBrand: (brandId: string) => void;
   setModule: (moduleId: string) => void;
 }
