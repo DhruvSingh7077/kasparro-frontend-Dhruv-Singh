@@ -23,15 +23,15 @@ export interface FounderStat {
 export const MISSION_ITEMS: MissionItem[] = [
   {
     icon: Brain,
-    text: "AI models are the new gatekeepers",
+    text: "AI models (GPT-4, Claude, Perplexity) now mediate 40%+ of search traffic",
   },
   {
     icon: Search,
-    text: "Traditional SEO is becoming obsolete",
+    text: "Traditional keyword SEO ignores vector embeddings and semantic retrieval",
   },
   {
     icon: TrendingUp,
-    text: "Brands need new visibility strategies",
+    text: "Brands need RAG-optimized content and entity graph positioning",
   },
 ];
 
@@ -40,34 +40,54 @@ export const PHILOSOPHY_PRINCIPLES: PhilosophyPrinciple[] = [
     icon: Brain,
     title: "Context Over Keywords",
     description:
-      "AI models don't parse keywords—they understand semantic relationships, entity graphs, and contextual relevance.",
+      "AI models use transformer attention mechanisms and cosine similarity (threshold >0.85) to match semantic intent—not TF-IDF keyword density. We optimize for embedding space proximity using text-embedding-3-large.",
     gradient: "from-blue-500 to-cyan-500",
   },
   {
     icon: Globe,
     title: "Trust Architecture",
     description:
-      "E-E-A-T isn't a checklist. It's a measurable signal system that AI models use to weight source credibility.",
+      "E-E-A-T is quantified via structured data (JSON-LD Schema.org markup), backlink domain authority (DR >50), author credentials (LinkedIn API verification), and content freshness (<90 days). We measure these as weighted signals (not subjective checklists).",
     gradient: "from-purple-500 to-pink-500",
   },
   {
     icon: Zap,
     title: "Retrieval Optimization",
     description:
-      "Content must be structured for how AI models retrieve, parse, and present information—not just for human readers.",
+      "RAG systems chunk content at 512-1024 token boundaries with overlap. We structure content with rich metadata (headers, summaries, entities), optimize for top-k retrieval (k=5-10), and ensure embedding quality via reranking models (Cohere Rerank).",
     gradient: "from-orange-500 to-red-500",
   },
 ];
 
 export const VISION_FEATURES: string[] = [
-  "Real-time AI presence monitoring",
-  "Automated trust signal optimization",
-  "Cross-platform visibility analytics",
-  "Predictive brand intelligence",
+  "Real-time AI presence monitoring (polling GPT-4/Claude APIs every 6 hours)",
+  "Automated trust signal optimization (Schema.org generator, backlink crawler)",
+  "Cross-platform visibility analytics (unified dashboard: ChatGPT, Perplexity, Gemini)",
+  "Predictive brand intelligence (time-series forecasting via Prophet/ARIMA)",
 ];
 
 export const FOUNDER_STATS: FounderStat[] = [
   { label: "System Thinking", value: "First Principles" },
-  { label: "Data Architecture", value: "Production-Grade" },
-  { label: "Product Focus", value: "Engineering-Led" },
+  { label: "Data Architecture", value: "TypeScript + Zustand + JSON-LD" },
+  { label: "Product Focus", value: "Engineering-Led (API-First)" },
 ];
+
+export async function fetchBrands() {
+  try {
+    // ✅ Use absolute URL for SSR
+    const res = await fetch("http://localhost:3000/api/brands", {
+      cache: "no-store",
+    });
+
+    if (!res.ok) {
+      console.error("Failed to fetch brands:", res.status);
+      return [];
+    }
+
+    const brands = await res.json();
+    return brands;
+  } catch (error) {
+    console.error("Error fetching brands:", error);
+    return [];
+  }
+}

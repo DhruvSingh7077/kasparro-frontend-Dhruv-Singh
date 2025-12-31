@@ -91,6 +91,10 @@ function ScoreCard({
 }
 
 function ModuleList({ modules }: { modules: AuditModulePreview[] }) {
+  // Error handling: Check if modules array is empty
+  if (!modules || modules.length === 0) {
+    return <p className="text-sm text-zinc-500">No audit modules available.</p>;
+  }
   return (
     <div className="space-y-2">
       <p className="text-xs font-medium text-zinc-600 uppercase tracking-wide">
