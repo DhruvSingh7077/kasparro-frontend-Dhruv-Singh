@@ -10,7 +10,7 @@ import { ArchitectureHeader } from "@/components/ui/architecture/ArchitectureHea
 import { PipelineStage } from "@/components/ui/architecture/PipelineStage";
 import { ComponentCard } from "@/components/ui/architecture/ComponentCard";
 import { ModulesGrid } from "@/components/ui/architecture/ModulesGrid";
-import { Database, Package, Brain, FileText } from "lucide-react";
+import { Database, Package, Brain } from "lucide-react";
 import { OutputSurfacesCard } from "@/components/ui/architecture/OutputSurfacesCard";
 import { DesignPrinciplesCard } from "@/components/ui/architecture/DesignPrinciplesCard";
 
