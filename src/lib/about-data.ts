@@ -71,23 +71,3 @@ export const FOUNDER_STATS: FounderStat[] = [
   { label: "Data Architecture", value: "TypeScript + Zustand + JSON-LD" },
   { label: "Product Focus", value: "Engineering-Led (API-First)" },
 ];
-
-export async function fetchBrands() {
-  try {
-    // ✅ Use absolute URL for SSR
-    const res = await fetch("http://localhost:3000/api/brands", {
-      cache: "no-store",
-    });
-
-    if (!res.ok) {
-      console.error("Failed to fetch brands:", res.status);
-      return [];
-    }
-
-    const brands = await res.json();
-    return brands;
-  } catch (error) {
-    console.error("Error fetching brands:", error);
-    return [];
-  }
-}

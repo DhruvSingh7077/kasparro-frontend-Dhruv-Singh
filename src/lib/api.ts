@@ -42,30 +42,6 @@ export async function fetchDashboardData(
   }
 }
 
-/**
- * Fetches list of available brands from API
-//  */
-// export async function fetchBrands(): Promise<Brand[]> {
-//   try {
-//     const response = await fetch("/api/brands", {
-//       method: "GET",
-//       headers: {
-//         "Content-Type": "application/json",
-//       },
-//       cache: "force-cache", // Brands don't change often
-//     });
-
-//     if (!response.ok) {
-//       throw new Error(`API error: ${response.status}`);
-//     }
-
-//     return await response.json();
-//   } catch (error) {
-//     console.error("Failed to fetch brands:", error);
-//     throw error;
-//   }
-// }
-// src/lib/api.ts - Make fetchBrands() return empty array
 export async function fetchBrands(): Promise<Brand[]> {
   try {
     const response = await fetch("/api/brands", {
